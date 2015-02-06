@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZionHighSchool/ZionHighSchool.iml" filepath="$PROJECT_DIR$/ZionHighSchool/ZionHighSchool.iml" />
       <module fileurl="file://$PROJECT_DIR$/zionhs.iml" filepath="$PROJECT_DIR$/zionhs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zionhs-android.iml" filepath="$PROJECT_DIR$/zionhs-android.iml" />
     </modules>
   </component>
 </project>
