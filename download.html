@@ -4,43 +4,58 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>안드로이드용 시온고등학교 앱</title>
+    <title>다운로드 | 안드로이드용 시온고등학교 앱</title>
       
 <!--      HTML Imports : Core and Paper Ploymer Elements Imports-->
       <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
       <link rel="import" href="bower_components/core-elements/core-elements.html">
       <link rel="import" href="bower_components/paper-elements/paper-elements.html">
-      <link rel="import" 
-  href="bower_components/font-awesome-polymer-icons/fa-icons.html">
+      <link rel="import" href="bower_components/font-awesome-polymer-icons/fa-icons.html">
+      <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
+      <link rel="stylesheet" href="css/common.css">
   </head>
-
-  <body>
     <body fullbleed layout vertical>
-  <core-header-panel flex>
-    <core-toolbar class="dark-theme" style="background-color: #27347a; color: white;">
+        <core-drawer-panel id="drawerPanel">
+  <div drawer id="drawerPanel" style="background-color: white;">   
+    <core-menu>
+        <paper-item><a href="index.html"><core-item icon="home" label="홈"</core-item></a></paper-item>
+        <paper-item><a href="download.html"><core-item icon="get-app" label="앱 다운로드"</core-item></a></paper-item>
+        <paper-item><a href="info.html"><core-item icon="fa:code" label="프로젝트 정보"</core-item></a></paper-item>
+        <paper-item><a href="feedback.html"><core-item icon="bug-report" label="버그 신고/피드백"</core-item></a></paper-item>
+            <core-submenu icon="open-in-new" label="관련 웹사이트">
+                <paper-item><a href="http://zion.hs.kr">시온고등학교 홈페이지</a></paper-item>
+                <paper-item><a href="http://zionhs.github.io">시온고등학교 오픈소스 저장소</a></paper-item>
+            </core-submenu>
+    </core-menu>
+            </div>
+ <core-header-panel flex main>
+    <core-toolbar class="dark-theme">
+        <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
       <div flex>시온고등학교<sup><small>for Android</small></sup></div>
-        <paper-icon-button icon="get-app"></paper-icon-button>
-        <paper-icon-button icon="info"></paper-icon-button>
-        <paper-icon-button icon="fa:github"></paper-icon-button>
-        <paper-icon-button icon="bug-report"></paper-icon-button>
     </core-toolbar>
       <div align="center">
 <!--        Contents-->
+          <br>
+          <h1><core-icon icon="get-app"></core-icon>다운로드</h1><br>
+          <h2>Google Play 에서 다운로드</h2>
+          <p>사용중이신 안드로이드 디바이스에서 Google Play 사용이 가능하신 경우, Google Play 에서 다운로드 하세요.</p>
+          <a href="download.html"><paper-button raised style="background: green; color:white;">
+               <core-icon icon="get-app"></core-icon>준비중...</paper-button></a>
           <br><br>
-           <img src="img/logo.png" width="10%">
-          <h2>안드로이드용 시온고등학교 앱</h2>
-          <img src="img/app.png" width="100%">
-           
-        
+          
+          <h2>파일 직접 다운로드</h2>
+          <p>디바이스에 Google Play 가 없는 경우 이용하세요.</p>
+          <a href="download.html"><paper-button raised style="background: green; color:white;">
+               <core-icon icon="get-app"></core-icon>준비중...</paper-button></a>
+          <br>
         </div>
-  </core-header-panel>
-        
+  </core-header-panel> 
+</core-drawer-panel>
+<script type="text/javascript" src="js/common.js"></script>
 </body>
-  </body>
 </html>
