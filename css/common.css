@@ -8,3 +8,10 @@ core-toolbar{
 background-color: #27347a; 
 color: white;
 }
+
+#mainbody{
+padding: 64px;
+}
+
+paper-shadow{
+padding: 16px;}

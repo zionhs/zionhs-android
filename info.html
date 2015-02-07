@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>프로젝트 정보 | 안드로이드용 시온고등학교 앱</title>
+      
+<!--      HTML Imports : Core and Paper Ploymer Elements Imports-->
+      <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+      <link rel="import" href="bower_components/core-elements/core-elements.html">
+      <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+      <link rel="import" href="bower_components/font-awesome-polymer-icons/fa-icons.html">
+      <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
+      <link rel="stylesheet" href="css/common.css">
+  </head>
+    <body fullbleed layout vertical>
+        <core-drawer-panel id="drawerPanel">
+  <div drawer id="drawerPanel" style="background-color: white;">   
+    <core-menu>
+        <paper-item><a href="index.html"><core-item icon="home" label="홈"</core-item></a></paper-item>
+        <paper-item><a href="download.html"><core-item icon="get-app" label="앱 다운로드"</core-item></a></paper-item>
+        <paper-item><a href="info.html"><core-item icon="fa:code" label="프로젝트 정보"</core-item></a></paper-item>
+        <paper-item><a href="feedback.html"><core-item icon="bug-report" label="버그 신고/피드백"</core-item></a></paper-item>
+            <core-submenu icon="open-in-new" label="관련 웹사이트">
+                <paper-item><a href="http://zion.hs.kr">시온고등학교 홈페이지</a></paper-item>
+                <paper-item><a href="http://zionhs.github.io">시온고등학교 오픈소스 저장소</a></paper-item>
+                <paper-item><a href="http://github.com/zionhs/zionhs-android">소스코드 얻기</a></paper-item>
+            </core-submenu>
+    </core-menu>
+            </div>
+ <core-header-panel flex main>
+    <core-toolbar class="dark-theme">
+        <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
+      <div flex>시온고등학교<sup><small>for Android</small></sup></div>
+    </core-toolbar>
+      <div align="center" id="mainbody">
+<!--        Contents-->
+          <br>
+          <h1><core-icon icon="fa:code"></core-icon>프로젝트 정보</h1><br>
+          
+          <p>안드로이드용 시온고등학교 앱은, 오픈소스 소프트웨어 이자 오픈소스 프로젝트 입니다.
+          소스코드가 모두 공개 되어 있으며, 누구든지 개발(또는 프로젝트)에 참여하실 수 있습니다.
+          이 프로젝트는 2013년에 한영빈(sukso96100@gmail.com) 에 의해 시작되었습니다.</p>
+          
+          <h2>소스코드 라이선스 / 소스코드 얻기</h2>
+          <p>소스코드는 GNU Gerneral Public License V3 라이선스로 GitHub 를 통해 배포되고 있습니다.
+          라이선스 조항에 따라 소스코드를 자유롭게 이용하실 수 있습니다.</p>
+          
+          <a href="https://raw.githubusercontent.com/zionhs/zionhs-android/master/README.txt"><paper-button raised>
+               <core-icon icon="description"></core-icon>README</paper-button></a>
+          <a href="https://raw.githubusercontent.com/zionhs/zionhs-android/master/COPYING.txt"><paper-button raised>
+               <core-icon icon="description"></core-icon>COPYING</paper-button></a>
+          <a href="https://raw.githubusercontent.com/zionhs/zionhs-android/master/CONTRIBUTORS.txt"><paper-button raised>
+               <core-icon icon="description"></core-icon>CONTRIBUTORS</paper-button></a>
+          <a href="https://raw.githubusercontent.com/zionhs/zionhs-android/master/NOTICES.txt"><paper-button raised>
+               <core-icon icon="description"></core-icon>NOTICES</paper-button></a>
+           <a href="https://github.com/zionhs/zionhs-android"><paper-button raised>
+               <core-icon icon="fa:github"></core-icon>GitHub 에서 소스코드 얻기</paper-button></a>
+          
+          <h2>프로젝트 관리자(메인테이너)</h2>
+          <p>이 프로젝트를 관리하고 계시는 분들 입니다.</p>
+          <paper-shadow z="1">
+                N : Woongkyu, Park<br>
+                E : pwk824@naver.com<br><br>    
+              
+                N : Youngbin, Han<br>
+                E : sukso96100@gmail.com<br>
+                D : Starter of this project
+          </paper-shadow>
+          
+          <h2>프로젝트 기여자</h2>
+          <p>이 프로젝트에 기여해 주신 분들 입니다.</p>
+          <paper-shadow z="1">
+                N : Hyesu, Shin<br>
+                E : exeplain@naver.com<br><br>
+
+                N : Minjun, Kim<br>
+                E : rgg800@gmail.com<br><br>
+
+                N : Huynjung, Kim<br>
+                E : bbkim98@naver.com<br><br>
+
+                N : Hyungi, Shin<br>
+                E : tlsgusrl9942@gmail.com<br><br>
+
+                N : Minseok, Kim<br>
+                E : iluvmc969@naver.com
+          </paper-shadow>
+        </div>
+  </core-header-panel> 
+</core-drawer-panel>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
