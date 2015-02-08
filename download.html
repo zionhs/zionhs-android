@@ -17,6 +17,7 @@
       <link rel="import" href="bower_components/font-awesome-polymer-icons/fa-icons.html">
       <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
       <link rel="import" href="bower_components/gplus-elements/dist/gplus-one.html">
+      <link rel="import" href="bower_components/github-project-card/github-project-card.html">
       <link rel="stylesheet" href="css/common.css">
   </head>
     <body fullbleed layout vertical>
@@ -29,19 +30,20 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
         <core-drawer-panel id="drawerPanel">
-  <div drawer id="drawerPanel" style="background-color: white;">   
-    <core-menu>
-        <paper-item><a href="index.html"><core-item icon="home" label="홈"</core-item></a></paper-item>
-        <paper-item><a href="download.html"><core-item icon="get-app" label="앱 다운로드"</core-item></a></paper-item>
-        <paper-item><a href="info.html"><core-item icon="fa:code" label="프로젝트 정보"</core-item></a></paper-item>
-        <paper-item><a href="feedback.html"><core-item icon="bug-report" label="버그 신고/피드백"</core-item></a></paper-item>
-            <core-submenu icon="open-in-new" label="관련 웹사이트">
-                <paper-item><a href="http://zion.hs.kr">시온고등학교 홈페이지</a></paper-item>
-                <paper-item><a href="http://zionhs.github.io">시온고등학교 오픈소스 저장소</a></paper-item>
-                <paper-item><a href="http://github.com/zionhs/zionhs-android">소스코드 얻기</a></paper-item>
-            </core-submenu>
-    </core-menu>
-            </div>
+            <core-header-panel drawer id="drawerPanel" flex style="background-color: white;" >
+                <core-menu>
+                    <github-project-card user="zionhs" project="zionhs-android"></github-project-card>
+                    <paper-item><a href="index.html"><core-item icon="home" label="홈"</core-item></a></paper-item>
+                    <paper-item><a href="download.html"><core-item icon="get-app" label="앱 다운로드"</core-item></a></paper-item>
+                    <paper-item><a href="info.html"><core-item icon="fa:code" label="프로젝트 정보"</core-item></a></paper-item>
+                    <paper-item><a href="feedback.html"><core-item icon="bug-report" label="버그 신고/피드백"</core-item></a></paper-item>
+                    <core-submenu icon="open-in-new" label="관련 웹사이트">
+                        <paper-item><a href="http://zion.hs.kr">시온고등학교 홈페이지</a></paper-item>
+                        <paper-item><a href="http://zionhs.github.io">시온고등학교 오픈소스 저장소</a></paper-item>
+                        <paper-item><a href="http://github.com/zionhs/zionhs-android">소스코드 얻기</a></paper-item>
+                    </core-submenu>
+                    </core-menu>              
+            </core-header-panel>
  <core-header-panel flex main>
     <core-toolbar class="dark-theme">
         <paper-icon-button 
