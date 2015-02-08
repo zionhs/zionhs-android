@@ -1,0 +1,28 @@
+{
+    "name": "facebook-like-button",
+    "version": "1.0.2",
+    "authors": [
+        "Kunal Nagar <knlnagar@gmail.com>"
+    ],
+    "description": "A Polymer Component for displaying the Facebook Like Button.",
+    "keywords": [
+        "web-component",
+        "web-components",
+        "polymer",
+        "facebook",
+        "like"
+    ],
+    "main": "facebook-like-button.html",
+    "license": "MIT",
+    "homepage": "https://github.com/kunalnagar/facebook-like-button/",
+    "ignore": [
+        "/.*",
+        "/tests/"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^0.4.2"
+    },
+    "devDependencies": {
+        "web-component-tester": "Polymer/web-component-tester#^0.7.3"
+    }
+}

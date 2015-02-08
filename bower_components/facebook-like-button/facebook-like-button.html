@@ -1,0 +1,198 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+A Polymer Component for displaying the Facebook Like Button.
+
+##### Example
+
+    <facebook-like-button></facebook-like-button>
+
+@element facebook-like-button
+@blurb A Polymer Component for displaying the Facebook Like Button.
+@homepage http://kunalnagar.github.io/facebook-like-button
+-->
+<polymer-element name="facebook-like-button" attributes="type appid pageurl width colorscheme showfaces action kiddirectedsite layout ref share">
+    <template>
+        <!-- HTML5 (Coming Soon) -->
+        <!-- <div
+        	class="fb-like-button"
+        	data-colorscheme="{{ colorscheme }}"
+        	data-force-wall="{{ forcewall }}"
+        	data-header="{{ showheader }}"
+        	data-height="{{ height }}"
+        	data-href="{{ pageurl }}"
+        	data-show-border="{{ showborder }}"
+        	data-show-faces="{{ showfriendsfaces }}"
+        	data-stream="{{ showposts }}"
+        	data-width="{{ width }}"
+        ></div> -->
+
+        <!-- XFBML (Coming Soon) -->
+        <!-- <fb:like
+        	colorscheme="{{ colorscheme }}"
+        	force_wall="{{ forcewall }}"
+        	header="{{ showheader }}"
+        	height="{{ height }}"
+        	href="{{ pageurl }}"
+        	show_border="{{ showborder }}"
+        	show_faces="{{ showfriendsfaces }}"
+        	stream="{{ showposts }}"
+        	width="{{ width }}"
+        ></fb:like> -->
+
+        <!-- IFRAME -->
+        <iframe src="//www.facebook.com/plugins/like.php?href={{ pageurl }}&amp;
+        	width={{ width }}&amp;
+        	colorscheme={{ colorscheme }}&amp;
+        	show_faces={{ showfaces }}&amp;
+        	appId={{ appid }}&amp;
+        	action={{ action }}&amp;
+        	kid_directed_site={{ kiddirectedsite }}&amp;
+        	layout={{ layout }}&amp;
+        	ref={{ ref }}&amp;
+        	share={{ share }}&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+
+    </template>
+    <script>
+    Polymer({
+        /**
+         * Type of Like Button
+         *
+         * Values: `iframe` | `xfbml` | `html5`
+         *
+         * Currently, only `iframe` is supported.
+         *
+         * @attribute type
+         * @type string
+         * @default iframe
+         */
+        type: 'iframe',
+
+        /**
+         * Facebook APP ID
+         *
+         * @attribute appid
+         * @type string
+         */
+        appid: '',
+
+        /**
+         * The absolute URL of the Facebook Page that will be liked.
+         *
+         * This is a required setting.
+         *
+         * @attribute pageurl
+         * @type string
+         * @default https://www.facebook.com/FacebookDevelopers
+         */
+        pageurl: 'https://www.facebook.com/FacebookDevelopers',
+
+        /**
+         * The width of the plugin (standard layout only), which is subject to the minimum and default width.
+         *
+         * For more details, checkout the [layout FAQ](https://developers.facebook.com/docs/plugins/like-button/#faqlayout)
+         *
+         * @attribute width
+         * @type int
+         */
+        width: '',
+
+        /**
+         * The color scheme used by the plugin.
+         *
+         * Values: `light` | `dark`
+         *
+         * @attribute colorscheme
+         * @type string
+         * @default light
+         */
+        colorscheme: 'light',
+
+        /**
+         * Specifies whether to display profile photos of people who like the page.
+         *
+         * Values: `true` | `false`
+         *
+         * @attribute showfaces
+         * @type bool
+         * @default true
+         */
+        showfaces: 'true',
+
+        /**
+         * The verb to display on the button.
+         *
+         * Values: `like` | `recommend`
+         *
+         * @attribute action
+         * @type string
+         * @default like
+         */
+        action: 'like',
+
+        /**
+         * If your web site or online service, or a portion of your service, is directed to children under 13
+         * [you must enable this](https://developers.facebook.com/docs/plugins/restrictions/)
+         *
+         * Values: `true` | `false`
+         *
+         * @attribute kiddirectedsite
+         * @type bool
+         * @default false
+         */
+        kiddirectedsite: 'false',
+
+        /**
+         * Selects one of the different layouts that are available for the plugin.
+         *
+         * Values: `standard` | `button_count` | `button` | `box_count`
+         *
+         * @attribute layout
+         * @type string
+         * @default standard
+         */
+        layout: 'standard',
+
+        /**
+         * A label for tracking referrals which must be less than 50 characters and can contain alphanumeric characters and some punctuation.
+         *
+         * See [FAQ](https://developers.facebook.com/docs/plugins/like-button#faqref) for more information.
+         *
+         * @attribute ref
+         */
+        ref: '',
+
+        /**
+         * Specifies whether to include a share button beside the Like button.
+         *
+         * Values: `true` | `false`
+         *
+         * @attribute share
+         * @type bool
+         * @default true
+         */
+        share: 'true',
+
+        renderFacebookLikeButton: function() {
+            console.log(this.type);
+            switch (this.type) {
+                case 'iframe':
+                    this.pageurl = encodeURIComponent(this.pageurl);
+                    break;
+            }
+        },
+        ready: function() {
+            this.async(this.renderFacebookLikeButton, null, 1000);
+        }
+    });
+    </script>
+</polymer-element>
