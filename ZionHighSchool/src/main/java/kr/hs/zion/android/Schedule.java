@@ -134,10 +134,6 @@ public class Schedule extends ActionBarActivity {
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         SRL = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
-        SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
-                Color.rgb(46, 204, 113),
-                Color.rgb(41, 128, 185),
-                Color.rgb(241, 196, 15));
         SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
